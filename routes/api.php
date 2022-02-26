@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ArticleController;
 //use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,9 @@ use Illuminate\Http\Request;
     return $request->user();
 });*/
 // List all articles
-Route::get('articles','ArticleController@index');
+Route::get('articles', [ArticleController::class,'index']);
 
-// List a single article
+/*// List a single article
 Route::get('article/{id}', 'ArticleController@show');
 
 // Create a new article
@@ -30,4 +31,4 @@ Route::post('article', 'ArticleController@store');
 Route::put('article', 'ArticleController@store');
 
 // Delete a article
-Route::delete('article/{id}', 'ArticleController@destroy');
+Route::delete('article/{id}', 'ArticleController@destroy');*/
