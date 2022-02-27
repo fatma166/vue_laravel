@@ -42,7 +42,7 @@
                 fetch(api_url)
                     .then(response => response.json())
                     .then(response => {
-                        this.posts = response.data;
+                        this.articles = response.data;
                     })
                     .catch(err => console.log(err));
             }
